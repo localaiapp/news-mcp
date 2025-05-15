@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fakenews": {
+      "command": "python",
+      "args": [
+        "-m", "mcp_fakenews.fakenews_detect"
+      ],
+      "env": {},
+      "setup": "pip install -e git+https://github.com/localaiapp/news-mcp.git#egg=fakenews"
+    }
+  }
+} 
