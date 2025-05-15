@@ -1,5 +1,5 @@
 [project]
-name = "fakenews"
+name = "mcp-fakenews"
 version = "0.1.0"
 description = "fake news detection"
 readme = "README.md"
@@ -17,9 +17,11 @@ mcp-fakenews = "mcp_fakenews.fakenews_detect:mcp.run"
 
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
-[tool.hatch.build.targets.wheel]
-packages = ["mcp_fakenews"]
-sources = ["src"] 
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"] 
