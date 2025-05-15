@@ -1,10 +1,24 @@
 [project]
 name = "fakenews"
 version = "0.1.0"
-description = "Add your description here"
+description = "fake news detection"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "httpx>=0.28.1",
     "mcp[cli]>=1.6.0",
+    "uvicorn",
 ]
+
+
+
+[project.scripts]
+mcp-fakenews = "fakenews.fakenews:mcp.run"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["fakenews"] 
