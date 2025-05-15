@@ -13,7 +13,7 @@ dependencies = [
 
 
 [project.scripts]
-mcp-fakenews = "fakenews.fakenews:mcp.run"
+mcp-fakenews = "mcp_fakenews.fakenews_detect:mcp.run"
 
 
 [build-system]
@@ -21,4 +21,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["fakenews"] 
+packages = ["src/mcp_fakenews"] 
